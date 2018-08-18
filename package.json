@@ -1,0 +1,27 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "Homework #8",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "moment": "^2.22.2",
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carmcollins/liri-node-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carmcollins/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/carmcollins/liri-node-app#readme"
+}
