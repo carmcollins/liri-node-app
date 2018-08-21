@@ -20,8 +20,8 @@ var fs = require("fs");
 
 var action = process.argv[2];
 
-var userInput = "";
-    for (var i = 3; i < process.argv.length; i++) {
+var userInput = process.argv[3];
+    for (var i = 4; i < process.argv.length; i++) {
         userInput += " " + process.argv[i]
     };
 
@@ -36,7 +36,8 @@ function concertThis() {
         if (error) {
             return console.log("Error occurred: " + error);
         } else {
-            for (var i = 0; i < body.length; i++) {
+            var parsedBody = JSON.parse(body);
+            for (var i = 0; i < parsedBody.length; i++) {
                 var venue = JSON.parse(body)[i].venue.name;
                 var city = JSON.parse(body)[i].venue.city;
                 var date = moment(JSON.parse(body)[i].datetime).format("MM/DD/YYYY");
@@ -45,10 +46,8 @@ function concertThis() {
                 console.log("Venue: " + venue);
                 console.log("City: " + city);
                 console.log("Date: " + date);
-                // getting an error after the last item in the list for some reason?
-                // this was working but now it's not???
-            }
-        }
+            };
+        };
     });
 };
 
@@ -99,7 +98,6 @@ function spotifyThisSong() {
     }
 };
 
-// works with one word movies, but not movies with multiple words
 function movieThis() {
 
     if (!userInput) {
