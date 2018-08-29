@@ -46,4 +46,6 @@ node liri.js do-what-it-says
 ```
 This will read a file called random.txt, grab the parameters from it, and complete one of the three functions above. By default, random.txt includes parameters to run the spotify-this-song function with "I Want It That Way."
 
-Enjoy!
+### Demo
+
+<img src="https://cdn.rawgit.com/carmcollins/liri-node-app/103a3777/demo.svg">
